@@ -69,30 +69,4 @@ const musicList = [
 ]
 
 
-const musicListElem = document.querySelector(".music-list")
 
-
-
-musicList.forEach((music) =>{
-    let displayedName = ""
-    if (music.artistName.length > 10) {
-        displayedName = music.artistName.slice(0, 10) + "...";
-    } else {
-        displayedName = music.artistName;
-    }
-    musicListElem.innerHTML +=`
-                <div class="music">
-                <img src="/files/image/${music.imagePath}">
-                <div class="info">
-                    <p title="${music.artistName}">
-                        ${displayedName}
-                    </p>
-                    <p>${music.musicName}</p>
-                    <p class="time">04 : 05
-                    </p>
-                </div>
-            </div>
-    `
-
-    
-})
