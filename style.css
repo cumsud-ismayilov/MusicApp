@@ -111,3 +111,51 @@ body {
 .music-active {
     color: rgb(190, 22, 42);
 }
+
+
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 0.5rem;
+}
+
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 1px;
+    cursor: pointer;
+    appearance: none;
+    background: rgb(0, 0, 0);
+}
+
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 2px;
+    background: rgb(190, 22, 42);
+    margin-top: -6.5px;
+    border-radius: 35px;
+}
+
+.time-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.currentTime {
+    font-size: 10px;
+    margin-bottom: -13px;
+}
+
+.music-info-active {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 9px;
+    width: 125px;
+ 
+}
