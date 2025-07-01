@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+  background-image: url("https://png.pngtree.com/background/20211217/original/pngtree-note-music-logo-watercolor-background-picture-image_1589075.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: cover;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  background-image: url("https://img.freepik.com/free-photo/white-painted-wall-texture-background_53876-138197.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 370px;
+  height: 470px;
+  border: 2px solid;
+  box-shadow: 0 0 10px 1px rgb(75, 47, 75);
+  border-top-color: rgba(9, 9, 8, 1);
+  border-right-color: rgba(246, 164, 57, 1);
+  border-bottom-color: rgba(166, 0, 34, 1);
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(61, 46, 61);
+  .gramafonImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+    animation-duration: 2s;
+  }
+  .controls-btn {
+    display: flex;
+    gap: 15px;
+    button {
+      font-size: 22px;
+      border: none;
+      outline: none;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.music-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  height: 300px;
+  overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  .music{
+      cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    border: 1px solid;
+    padding: 4px;
+    img{
+         width: 40px;
+    height: 40px;
+    object-fit: cover;
+    overflow: hidden;
+    margin-right: 10px;
+    }
+    .info{
+         width: 100%;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    }
+  }
+}
+
+
+.music-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.music-active {
+    color: rgb(190, 22, 42);
+}
